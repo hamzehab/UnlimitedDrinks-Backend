@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  app:
+    container_name: "unlimiteddrinks_dev"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "python app/run.py"
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - unlimiteddrinks
+
+  db:
+    container_name: "unlimiteddrinks"
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+    networks:
+      - unlimiteddrinks
+    ports:
+      - 5400:5432
+
+  pgadmin:
+    container_name: "unlimiteddrinks_pgadmin"
+    image: dpage/pgadmin4
+    env_file:
+      - .env
+    ports:
+      - "4000:80"
+    depends_on:
+      - db
+    networks:
+      - unlimiteddrinks
+    volumes:
+      - ./pgadmin.json:/pgadmin4/servers.json
+
+volumes:
+  postgres_data:
+
+networks:
+  unlimiteddrinks:
+    driver: bridge
