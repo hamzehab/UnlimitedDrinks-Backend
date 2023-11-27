@@ -4,7 +4,8 @@ import random
 
 import stripe
 from db.schema import Address, Category, Customer, Order, OrderItem, Product
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, HTTPException, Request, status
+from fastapi.responses import JSONResponse
 from loguru import logger
 
 from .models import (
@@ -272,6 +273,39 @@ async def create_customer(customer: CustomerCreate, address: AddressCreate):
         raise HTTPException(status_code=404, detail=str(e))
 
 
+@router.post("/customer/editName/{customer_id}", tags=["customer"])
+async def edit_customer_name(customer_id: str, customer_name: dict):
+    customerExists = await does_customer_exist(customer_id)
+    if not customerExists:
+        raise HTTPException(status_code=404, detail="Customer does not exist")
+    try:
+        customer = await Customer.get(id=customer_id)
+        if (
+            customer.first_name == customer_name["first_name"]
+            and customer.last_name == customer_name["last_name"]
+        ):
+            return JSONResponse(
+                status_code=status.HTTP_204_NO_CONTENT,
+                content={"detail": "No changes were made"},
+            )
+
+        if customer.first_name != customer_name["first_name"]:
+            customer.first_name = customer_name["first_name"]
+
+        if customer.last_name != customer_name["last_name"]:
+            customer.last_name = customer_name["last_name"]
+
+        await customer.save()
+
+        updated_customer = await Customer.get(id=customer_id)
+        return {
+            "first_name": updated_customer.first_name,
+            "last_name": updated_customer.last_name,
+        }
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
 # Address Endpoints
 @router.get("/customer/{customer_id}/addresses", tags=["address"])
 async def get_customer_addresses(customer_id: str):
@@ -323,6 +357,44 @@ async def change_main_address(customer_id: str, address_id: int):
         raise HTTPException(status_code=404, detail="Customer not Found")
 
 
+@router.post("/address/update/{customer_id}/{address_id}", tags=["address"])
+async def update_address(customer_id: str, address_id: int, address: AddressCreate):
+    exists = await does_customer_exist(customer_id)
+    if exists:
+        try:
+            address_to_update = await Address.get(id=address_id)
+
+            if (AddressCreate(**dict(address_to_update))).dict(
+                exclude_unset=True, exclude_none=True
+            ) == address.dict(exclude_unset=True, exclude_none=True):
+                return JSONResponse(
+                    status_code=status.HTTP_204_NO_CONTENT,
+                    content={"detail": "No changes were made"},
+                )
+
+            fields_to_update = [
+                "first_name",
+                "last_name",
+                "street",
+                "street2",
+                "city",
+                "state",
+                "zip_code",
+            ]
+            for field in fields_to_update:
+                if getattr(address_to_update, field) != getattr(address, field):
+                    setattr(address_to_update, field, getattr(address, field))
+
+            await address_to_update.save()
+            updated_address = await Address.get(id=address_id)
+            return SingleAddressModel(**dict(updated_address))
+        except Exception as e:
+            raise HTTPException(status_code=404, detail=str(e))
+    else:
+        raise HTTPException(status_code=404, detail="Customer not Found")
+
+
+@router.delete("/address/customer")
 @router.post("/checkout/session")
 async def checkout(customer_email: str, cartItems: list[dict]):
     stripe.api_key = os.environ["STRIPE_SECRET_KEY"]
