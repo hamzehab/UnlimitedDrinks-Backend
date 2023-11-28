@@ -14,6 +14,7 @@ from .models import (
     CategoryCreate,
     CategoryModel,
     CategoryUpdate,
+    CheckoutModel,
     CustomerCreate,
     CustomerModel,
     OrderItemModel,
@@ -396,23 +397,35 @@ async def update_address(customer_id: str, address_id: int, address: AddressCrea
 
 @router.delete("/address/customer")
 @router.post("/checkout/session")
-async def checkout(customer_email: str, cartItems: list[dict]):
+async def checkout(customer_email: str, data: CheckoutModel):
     stripe.api_key = os.environ["STRIPE_SECRET_KEY"]
 
     line_items = []
-    for item in cartItems:
+    taxes_and_fees = 0
+    for item in data.cartItems:
         product = await Product.get(id=item["product_id"])
+        unit_amount = int(product.price * 100)
+        taxes_and_fees += unit_amount * item["quantity"]
         line_items.append(
             {
                 "price_data": {
                     "currency": "usd",
                     "product_data": {"name": product.name},
-                    "unit_amount": int(product.price * 100),
+                    "unit_amount": unit_amount,
                 },
                 "quantity": item["quantity"],
             }
         )
-
+    line_items.append(
+        {
+            "price_data": {
+                "currency": "usd",
+                "product_data": {"name": "Taxes and Fees"},
+                "unit_amount": round(taxes_and_fees * 0.06625),
+            },
+            "quantity": 1,
+        }
+    )
     try:
         session = stripe.checkout.Session.create(
             payment_method_types=["card"],
@@ -421,7 +434,10 @@ async def checkout(customer_email: str, cartItems: list[dict]):
             customer_email=customer_email,
             success_url=f"{os.environ['URL']}/success",
             cancel_url=f"{os.environ['URL']}/cart",
-            metadata={"cartItems": json.dumps(cartItems), "address_id": "123 Main St"},
+            metadata={
+                "cartItems": json.dumps(data.cartItems),
+                "address_id": data.address_id,
+            },
         )
 
         return session
@@ -457,8 +473,7 @@ async def webhook(request: Request):
             order = await Order.create(
                 customer_id=customer.id,
                 total_price=event.data.object.amount_total,
-                shipAddress_id=1,
-                # shipAddress_id=event.data.object.metadata["address_id"],
+                shipAddress_id=event.data.object.metadata["address_id"],
                 shippedDate=None,
                 status=0,
             )
