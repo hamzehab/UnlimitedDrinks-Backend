@@ -109,3 +109,8 @@ class OrderModel(BaseModel):
     shipAddress: str
     shippedDate: datetime | None = None
     orderDate: str
+
+
+class CheckoutModel(BaseModel):
+    address_id: int
+    cartItems: list[dict]
