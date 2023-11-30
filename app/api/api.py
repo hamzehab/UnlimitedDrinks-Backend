@@ -1,6 +1,7 @@
 import json
 import os
 import random
+from datetime import datetime, timedelta, timezone
 
 import stripe
 from db.schema import Address, Category, Customer, Order, OrderItem, Product
@@ -516,7 +517,7 @@ async def get_orders(customer_id: str):
 
                 orderItemsModelList.append(
                     OrderItemModel(
-                        id=item.id,
+                        id=product.id,
                         category=category.name,
                         name=product.name,
                         image=product.image,
@@ -542,3 +543,47 @@ async def get_orders(customer_id: str):
     except Exception as e:
         logger.info(str(e))
         raise HTTPException(status_code=404, detail=str(e))
+
+
+@router.get("/orders/recent/{customer_id}", tags=["order"])
+async def is_recent_order_placed(customer_id: str):
+    try:
+        orders = await Order.filter(customer_id=customer_id).order_by("-orderDate")
+        order = orders[0]
+        address = await Address.get(id=order.shipAddress_id)
+        recent_time_window = datetime.now(timezone.utc) - orders[0].orderDate
+
+        if recent_time_window < timedelta(minutes=2):
+            order_items = await order.orderItems.all()
+            orderItemsModelList = []
+            for item in order_items:
+                product = await Product.get(id=item.product_id)
+                category = await Category.get(id=product.category_id)
+
+                orderItemsModelList.append(
+                    OrderItemModel(
+                        id=product.id,
+                        category=category.name,
+                        name=product.name,
+                        image=product.image,
+                        brand=product.brand,
+                        price=product.price,
+                        quantity=item.quantity,
+                        subtotal=item.price,
+                    )
+                )
+
+            return OrderModel(
+                id=order.id,
+                subtotal=order.total_price,
+                orderDate=(order.orderDate).strftime("%B %d, %Y"),
+                status=order.status,
+                full_name=f"{address.first_name} {address.last_name}",
+                shipAddress=address.full_street(),
+                orderItems=orderItemsModelList,
+            )
+        else:
+            return False
+
+    except Exception:
+        return False
