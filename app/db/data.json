@@ -1,0 +1,721 @@
+{
+  "categories": [
+    {
+      "name": "soda",
+      "description": "Fizzy and sweet carbonated beverages, available in various flavors."
+    },
+    {
+      "name": "vitamin water",
+      "description": "Nutrient-enhanced water with added vitamins, offering a refreshing and health-conscious option."
+    },
+    {
+      "name": "energy drinks",
+      "description": "Highly caffeinated beverages designed to provide a quick energy boost, often containing additional supplements."
+    },
+    {
+      "name": "iced tea",
+      "description": "Chilled tea variations, perfect for a refreshing and cooling drink on warm days."
+    },
+    {
+      "name": "sparkling water",
+      "description": "Carbonated water with a hint of natural flavors, providing a bubbly and calorie-free option."
+    }
+  ],
+  "products": [
+    {
+      "name": "Coca-Cola",
+      "image": "cola.png",
+      "category_name": "soda",
+      "description": "Indulge in the timeless delight of Classic Cola. This iconic soda offers a perfect blend of effervescence and rich cola flavor, satisfying your taste buds with every sip. Crafted by Coca-Cola, a symbol of refreshment for generations.",
+      "brand": "Coca-Cola"
+    },
+    {
+      "name": "Diet Coke",
+      "image": "diet_coke.png",
+      "category_name": "soda",
+      "description": "Crisp, cold and reliable, this is the one and only Diet Coke —your everyday wing (wo)man, your deliciously fizzy go-to companion. This is the kind of sugar-free soda that you want throughout your day. Whether you're looking for a tasty way start to your day or to refresh your afternoon, you'll never be lost with a Diet Coke.Diet Coke always hits the spot. Alongside meals, celebrations or just your friends in your backyard, at any time of day. In fact, it's basically a friend itself. Because it's the best kind of familiar, and something you never have to second guess. You trust it, and it's always there for you whenever you want it.Diet Coke also comes in a caffeine-free option. And if you're looking to excite your taste buds even more, there's a host of different flavors to satisfy. Really, it's the diet cola you know you can turn to, no matter what you're looking for.So when you want a diet soda, think Diet Coke. Because Diet Coke is an original, just like you. Oh yeah, and it's incredibly refreshing. Always.",
+      "brand": "Coca-Cola"
+    },
+    {
+      "name": "Coca-Cola Zero",
+      "image": "cola_zero.png",
+      "category_name": "soda",
+      "description": "Soda. Pop. Soft drink. Sparkling beverage.Whatever you call it, nothing compares to the refreshing, crisp taste of Coca-Cola Zero Sugar. Enjoy with friends, on the go or with a meal. Whatever the occasion, wherever you are, Coca-Cola Zero Sugar makes life's special moments a little bit better.The great taste of Coca-Cola has stood the test of time. And Coca-Cola Zero Sugar brings you a Coca-Cola taste with zero sugar. Between the delicious taste and refreshing fizz, it's sure to give you that “ahhh” moment whenever you want it.Coca-Cola is available in many different options, including Coca-Cola Original Taste, Coca-Cola Caffeine Free, and a variety of all-time favorite flavors like Coca-Cola Cherry and Coca-Cola Vanilla. Whatever you're looking for, there's a Coca-Cola to satisfy your taste buds.Every sip, every “ahhh,” every smile—find that feeling with Coca-Cola Zero Sugar. Best enjoyed ice-cold for maximum refreshment. Grab a Coca-Cola Zero Sugar, take a sip and find your “ahhh” moment.Enjoy Coca-Cola Zero Sugar.",
+      "brand": "Coca-Cola"
+    },
+    {
+      "name": "Coke Cherry",
+      "image": "coke_cherry.png",
+      "category_name": "soda",
+      "description": "Soda. Pop. Soft drink. Sparkling beverage.Whatever you call it, nothing compares to the refreshing, crisp taste of Coca-Cola Cherry. A little flavor can make a lot of magic happen and Coca-Cola Cherry is here to make your taste buds happy. Enjoy with friends, on the go or with a meal. Whatever the occasion, Coca-Cola Cherry makes life's special moments a little bit better.A delicious combination of flavors, Coca-Cola Cherry blends a familiar taste of Coca-Cola Original Taste with something unexpected, creating more ways for you to enjoy Coca-Cola. Between that perfect taste and refreshing fizz, it's sure to give you that “ahhh” moment whenever you want it.Coca-Cola is available in many different options, including Coca-Cola Original Taste and a variety of all-time favorite flavors like Coca-Cola Vanilla and Coca-Cola Cherry Vanilla. Looking for something with zero sugar or caffeine free? Then look no further than Coca-Cola Zero Sugar and Coca-Cola Caffeine Free. Whatever you're looking for, there's a Coca-Cola to satisfy your taste buds.Every sip, every “ahhh,” every smile—find that feeling with Coca-Cola Cherry. Best enjoyed ice-cold for maximum refreshment. Grab a Coca-Cola Cherry and find your “ahhh” moment.Enjoy Coca-Cola Cherry.",
+      "brand": "Coca-Cola"
+    },
+    {
+      "name": "Coke Vanilla",
+      "image": "coke_vanilla.png",
+      "category_name": "soda",
+      "description": "Soda. Pop. Soft drink. Sparkling beverage.Whatever you call it, nothing compares to the refreshing, crisp taste of Coca-Cola Vanilla. A little flavor can make a lot of magic happen and Coca-Cola Vanilla is here to make your taste buds happy. Enjoy with friends, on the go or with a meal. Whatever the occasion, Coca-Cola Vanilla makes life's special moments a little bit better.A delicious combination of flavors, Coca-Cola Vanilla blends a familiar taste of Coca-Cola Original Taste with something unexpected, creating more ways for you to enjoy Coca-Cola. Between that perfect taste and refreshing fizz, it's sure to give you that “ahhh” moment whenever you want it.Coca-Cola is available in many different options, including Coca-Cola Original Taste, including a variety of all-time favorite flavors like Coca-Cola Cherry and Coca-Cola Orange Vanilla.. Looking for something with zero sugar or caffeine free? Then look no further than Coca-Cola Zero Sugar and Coca-Cola Caffeine Free. Whatever you're looking for, there's a Coca-Cola to satisfy your taste buds.Every sip, every “ahhh,” every smile— find that feeling with Coca-Cola Vanilla. Best enjoyed ice-cold for maximum refreshment. Grab a Coca-Cola Vanilla and find your “ahhh” moment.Enjoy Coca-Cola Vanilla.",
+      "brand": "Coca-Cola"
+    },
+    {
+      "name": "Dr Pepper",
+      "image": "drpepper.png",
+      "category_name": "soda",
+      "description": "Satisfy your game day craving for flavor with the unique taste of Dr Pepper! It's not your ordinary soda and it's definitely not a cola. It's the sweet treat that fans deserve. So, whether you enjoy the original or any of the varieties like Dr Pepper Cherry, Dr Pepper & Cream Soda or Dr Pepper Zero Sugar, you'll get the satisfying flavor that only Dr Pepper can deliver straight to your taste buds. Established in 1885 in Waco, TX, Dr Pepper is the oldest major soft drink in the United States. It's a refreshing favorite that's always smooth and delicious at dinner, lunch, or breakfast. Although you can enjoy the unique flavor all on its own, you can also pair it with food. Dr Pepper is the perfect companion for every college football occasion, from tailgating to home-gating, and will pair perfectly with burgers, pizza or rotisserie chicken to a quick snack like pastries, chocolates or your favorite candy. You can't go wrong with a Dr Pepper when you want to satisfy your sweet cravings. Give your taste buds something to cheer for with the smooth, satisfying flavor of an ice-cold Dr Pepper, Dr Pepper Cherry or Dr Pepper & Cream Soda and they'll thank you for it every time!",
+      "brand": "Dr. Pepper"
+    },
+    {
+      "name": "Diet Dr Pepper",
+      "image": "diet_drpepper.png",
+      "category_name": "soda",
+      "description": "It's the Sweeeeeeeet One! Satisfy your craving for flavor with the authentic taste of Diet Dr Pepper! It's not your ordinary soda and it's definitely not a cola. Made with the original recipe of 23 signature flavors but with zero calories, it's the sweet treat that can't be beat. Established in 1885 in Waco, TX, Dr Pepper is the oldest major soft drink in the United States. It's a refreshing favorite that's always smooth and delicious at dinner, lunch or breakfast (we won't judge you). Although you can enjoy the unique flavor all on its own, you can also pair it with food. Dr Pepper is the perfect companion for everything from a full meal like pizza, burgers or rotisserie chicken to a quick snack like pastries, chocolates or your favorite candy. You can't go wrong with a Diet Dr Pepper when you want to satisfy your sweet cravings. Give your tastebuds something to cheer for with the smooth, satisfying flavor of an ice-cold Dr Pepper and they'll thank you for it every time!",
+      "brand": "Dr. Pepper"
+    },
+    {
+      "name": "Dr Pepper Zero",
+      "image": "drpepper_zero.png",
+      "category_name": "soda",
+      "description": "Satisfy your game day craving for flavor with the unique taste of Dr Pepper! It's not your ordinary soda and it's definitely not a cola. It's the sweet treat that fans deserve. So, whether you enjoy the original or any of the varieties like Dr Pepper Cherry, Dr Pepper & Cream Soda or Dr Pepper Zero Sugar, you'll get the satisfying flavor that only Dr Pepper can deliver straight to your taste buds. Established in 1885 in Waco, TX, Dr Pepper is the oldest major soft drink in the United States. It's a refreshing favorite that's always smooth and delicious at dinner, lunch, or breakfast. Although you can enjoy the unique flavor all on its own, you can also pair it with food. Dr Pepper is the perfect companion for every college football occasion, from tailgating to home-gating, and will pair perfectly with burgers, pizza or rotisserie chicken to a quick snack like pastries, chocolates or your favorite candy. You can't go wrong with a Dr Pepper when you want to satisfy your sweet cravings. Give your taste buds something to cheer for with the smooth, satisfying flavor of an ice-cold Dr Pepper, Dr Pepper Cherry or Dr Pepper & Cream Soda and they'll thank you for it every time!",
+      "brand": "Dr. Pepper"
+    },
+    {
+      "name": "Pepsi",
+      "image": "pepsi.png",
+      "category_name": "soda",
+      "description": "Enjoy the sweet taste of Pepsi Cola soda. They come in a pack of 24 cans and each contains 12 fl oz. You can share them with others or save them for yourself to drink. Perfect for parties, meals, and anywhere you need to make a big impression. This 12 fl oz Pepsi is free of sugar and fat. It's suitable for sporting events and holidays. You can recycle the cans when they're empty. This Pepsi is formulated to be refreshing and crisp. Enjoy the refreshing cola taste right out of the can, over ice, or with a twist of lemon or lime. For a classic treat, try serving with a scoop of vanilla ice cream!",
+      "brand": "Pepsi"
+    },
+    {
+      "name": "Diet Pepsi",
+      "image": "diet_pepsi.png",
+      "category_name": "soda",
+      "description": "Diet Pepsi Cola Soda Pop light, crisp taste, With its light, crisp taste, diet pepsi gives you all the refreshment you need - with zero sugar, zero calories and zero carbs.",
+      "brand": "Pepsi"
+    },
+    {
+      "name": "Pepsi Zero",
+      "image": "pepsi_zero.png",
+      "category_name": "soda",
+      "description": "Pepsi Zero Sugar is the only soda with zero calories and maximum Pepsi taste!",
+      "brand": "Pepsi"
+    },
+    {
+      "name": "Pepsi Cherry",
+      "image": "pepsi_cherry.png",
+      "category_name": "soda",
+      "description": "Only Wild Cherry Pepsi Cola soda has the thrilling burst of unique cherry flavor and a sweet, crisp taste that gives you more to go wild for.",
+      "brand": "Pepsi"
+    },
+    {
+      "name": "Nitro Pepsi",
+      "image": "nitro_pepsi.png",
+      "category_name": "soda",
+      "description": "Introducing Nitro Pepsi™: the first-ever nitrogen-infused cola. It's more than just a cola, it's an experience. The easy texture. The silky foam. The rising cascade. The unapologetically Pepsi® taste. It sparks connection and conversation, straight from the very first sip. With lower carbonation and smaller bubbles, Nitro Pepsi is smooth and easy to drink. To best experience it, chill the can, pour hard, then admire and enjoy.",
+      "brand": "Pepsi"
+    },
+    {
+      "name": "Sprite",
+      "image": "sprite.png",
+      "category_name": "soda",
+      "description": "Dive into the bold and adventurous Blue Raspberry Soda. Brought to you by Blue Sky, this soda features the electrifying flavor of blue raspberries, delivering a unique and vibrant taste experience.",
+      "brand": "Sprite"
+    },
+    {
+      "name": "Sprite Zero",
+      "image": "sprite_zero.png",
+      "category_name": "soda",
+      "description": "Dive into the bold and adventurous Blue Raspberry Soda. Brought to you by Blue Sky, this soda features the electrifying flavor of blue raspberries, delivering a unique and vibrant taste experience.",
+      "brand": "Blue Sky"
+    },
+    {
+      "name": "Mountain Dew",
+      "image": "mountain_dew.png",
+      "category_name": "soda",
+      "description": "Experience all the exhilarating taste of Mountain Dew by cracking open a cold can of Mountain Dew. Refresh your taste buds with chuggable, intense refreshment that delivers the great Dew flavor without the guilt. The ingredients include citric acid, orange juice concentrate, and carbonated water, all contributing to the 100% natural flavors. Enjoy the satisfying, crisp taste of Mountain Dew without compromising on refreshment.",
+      "brand": "Blue Sky"
+    },
+    {
+      "name": "Diet Mountain Dew",
+      "image": "diet_mountain_dew.png",
+      "category_name": "soda",
+      "description": "Experience all the exhilarating taste of Mountain Dew with none of the calories by cracking open a cold can of Diet Mountain Dew. Refresh your taste buds with chuggable, intense refreshment that delivers the great Dew flavor without the guilt. The ingredients include citric acid, orange juice concentrate, and carbonated water, all contributing to the 100% natural flavors. Enjoy the satisfying, crisp taste of Diet Mountain Dew without compromising on refreshment.",
+      "brand": "Blue Sky"
+    },
+    {
+      "name": "Mountain Dew Zero",
+      "image": "mountain_dew_zero.png",
+      "category_name": "soda",
+      "description": "Mtn Dew exhilarates and quenches with its one of a kind, bold taste. Enjoy its chuggable intense refreshment. Crack open a cold Mtn Dew and refresh your taste buds.",
+      "brand": "Blue Sky"
+    },
+    {
+      "name": "Starry",
+      "image": "starry.png",
+      "category_name": "soda",
+      "description": "It's time to refresh yourself - introducing Starry! Starry is a new lemon lime soda bringing you a crisp hit of refreshing lemon-lime flavor with a bite. Starry is here to help give you a lift and brighten things up, because we know things can get crazy out there. It's the brightest lemon lime.",
+      "brand": "Starry"
+    },
+    {
+      "name": "Starry Zero",
+      "image": "starry_zero.png",
+      "category_name": "soda",
+      "description": "It's time to refresh yourself - introducing Starry! Starry is a new lemon lime soda bringing you a crisp hit of refreshing lemon-lime flavor with a bite. Starry is here to help give you a lift and brighten things up, because we know things can get crazy out there. It's the brightest lemon lime.",
+      "brand": "Starry"
+    },
+    {
+      "name": "Fanta Strawberry",
+      "image": "fanta_strawberry.png",
+      "category_name": "soda",
+      "description": "Choosing the right fruit soda can be a whole thing. But when you've got a delicious bottle of Fanta Strawberry ready to go, the decision is easy. Why?​Because who doesn't want to try the ripeness, the sweetness, the juiciness of plump, red strawberries, all in a caffeine-free soda? It's like finding the most perfect strawberry out of the bunch. And raising it as if it were your own. Drinking Fanta Strawberry soda.Fanta has been making delicious flavors like this for literally, a long time. Not Jurassic long, or like a tortoises' lifespan long, but most likely before you were born long (unless you are a grandparent, in which case rock on gramps!). So anyway, you should trust Fanta when it comes to fruit soda. We have a lot of flavors you should try, and they are all super good.Grab yourself a 12oz 12 pack of Fanta Strawberry soda—come on, the decision is easy.",
+      "brand": "Fanta"
+    },
+    {
+      "name": "Fanta Orange",
+      "image": "fanta_orange.png",
+      "category_name": "soda",
+      "description": "Choosing the right fruit soda can be a whole thing. But when you've got a delicious bottle of Fanta Orange ready to go, the decision is easy. Why?​Well, it tastes like it's ripe from the tree. The orangiest of orange you can imagine. Simply iconic citrus-y flavor, like a caffeine-free sunset on the beach, where you're living in the moment, shooting for the stars and discovering new ones while you're at it. It tastes so bright it's in the gifted program. A flavor that's effervescent and luminescent and all the other -escents.Fanta has been making delicious flavors like this for literally a long time. Not Jurassic long, or like a tortoise's lifespan long, but most likely before you were born long (unless you are a grandparent, in which case: rock on gramps!). So anyway, you should trust Fanta when it comes to fruit soda. We have a lot of flavors you should try, and they are all super good.Grab yourself a 12oz 12 pack of Fanta Orange—come on, the decision is easy.",
+      "brand": "Fanta"
+    },
+    {
+      "name": "Canada Dry Ginger Ale",
+      "image": "canada_dry.png",
+      "category_name": "soda",
+      "description": "Sip into your comfort zone with the refreshing taste of Canada Dry Ginger Ale. There comes a time when we all need a break from the treadmill of life, and there's only one thing to do during those moments when we need an escape from stresses and obligations... Grab an ice-cold can of Canada Dry Ginger Ale, and sip into your comfort zone. Whether that means you're sitting on your front porch swing, listening to your favorite podcast or just taking a quiet moment for yourself, Canada Dry is the perfect ginger ale to make it even better. And it's caffeine free! Once transported to the comfort zone, you can enjoy refreshing ginger taste made with only high quality ingredients, soothing you with each comforting sip. For over 100 years, Canada Dry has been creating quality carbonated beverages and mixers that can be enjoyed at any time of day. There are so many ways you can enjoy the great taste of Canada Dry Ginger Ale. You can make delicious cocktails like a Moscow Mule in a cold copper cup, or simply sit back and relax with a Canada Dry Ginger Ale over ice all by itself. So grab an ice-cold can of Canada Dry, sink into your favorite chair, and sip into the comfort zone.",
+      "brand": "Canada Dry"
+    },
+    {
+      "name": "XXX Açai Blueberry Pomegranate",
+      "image": "acai_blueberry_pomegranate.png",
+      "category_name": "vitamin water",
+      "description": "Introducing our enhanced vitamin and nutrient-infused water beverage, now boasting 2.5 times the antioxidants to combat free radicals compared to our previous formula. Experience a winning combination of great taste and increased nutritional benefits. This revitalizing drink is enriched with electrolytes and a blend of essential nutrients, including vitamin A, vitamin C, and selenium—three powerful antioxidants known for their free radical-fighting properties. Additionally, it serves as an excellent source of vitamin B5, vitamin B6, and vitamin B12. Indulge in the delicious açai-blueberry-pomegranate flavor, complemented by other natural flavors, creating a refreshing and satisfying beverage. Packaged in an eco-friendly multi-pack ring carrier, our commitment to sustainability is evident with 50% post-consumer recycled content. Embrace the goodness of our revitalized formula—great taste, more nutrients, and a win-win for your well-being.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Refresh Tropical Mango",
+      "image": "refresh_tropical_mango.png",
+      "category_name": "vitamin water",
+      "description": "Presenting our upgraded vitamin and nutrient-enhanced water beverage, now designed to deliver sports-drink level rehydration. Enjoy the perfect combination of great taste and enhanced nutritional benefits. Packed with electrolytes and an array of essential nutrients, this beverage not only offers superior rehydration but also serves as an excellent source of vitamin B5, vitamin B6, and vitamin B12. Immerse yourself in the delightful tropical mango flavor, expertly blended with other natural flavors. With an abundance of electrolytes and a commitment to providing a refreshing experience, our revitalized formula ensures a win-win for your hydration needs. Embrace the goodness of great taste, more nutrients, and optimal rehydration for a truly satisfying beverage.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Power-c Dragonfruit",
+      "image": "powerc_dragonfruit.png",
+      "category_name": "vitamin water",
+      "description": "Introducing our enhanced vitamin and nutrient-infused water beverage, now offering even more nutrients for a win-win combination of great taste and optimal well-being. Immerse yourself in a revitalizing blend of electrolytes and essential nutrients, including 200% of your daily value of vitamin C, 25% of your daily value of zinc, and taurine. Additionally, revel in the benefits of a great source of vitamin B5, vitamin B6, and vitamin B12. Delight your taste buds with the exotic flavor of dragonfruit, expertly combined with other natural flavors. Committed to sustainability, our multi-pack ring carrier features 50% post-consumer recycled content. Embrace the goodness of our enhanced formula—a delicious taste, an abundance of nutrients, and a win-win for your overall wellness.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Focus Kiwi Strawberry",
+      "image": "focus_kiwi_strawberry.png",
+      "category_name": "vitamin water",
+      "description": "Introducing our enriched beverage for a winning combination of great taste and heightened nutritional benefits. Revel in the goodness of our vitamin and nutrient-infused drink, now fortified with 300% of the daily value of vitamin B5, B6, and B12, along with the invigorating addition of guarana. Immerse yourself in the delightful fusion of kiwi strawberry flavor, expertly crafted with other natural flavors. Experience the energy-boosting qualities of B vitamins and guarana, making this beverage a perfect choice for a refreshing and revitalizing drink. Embrace the enhanced formula—great taste, an abundance of nutrients, and a win-win for your overall well-being.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Essential Orange Orange",
+      "image": "essential_orange_orange.png",
+      "category_name": "vitamin water",
+      "description": "Introducing our exceptional vitamin and nutrient-enhanced water beverage, offering a delightful blend of great taste and increased nutritional benefits. Immerse yourself in the invigorating combination of electrolytes and essential nutrients, including 250% of the daily value of vitamin C and 25% of the daily value of zinc. Additionally, savor the goodness of a rich source of vitamin B5, vitamin B6, and vitamin B12. Indulge in the delicious orange-orange flavor, skillfully crafted with a mix of other natural flavors to elevate your taste experience. Our enhanced formula ensures a win-win for your hydration needs, delivering both exceptional taste and an abundance of nutrients for optimal well-being.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Energy Tropical Citrus",
+      "image": "energy_tropical_citrus.png",
+      "category_name": "vitamin water",
+      "description": "Elevate your beverage experience with our energizing creation—a harmonious blend of great taste and enhanced nutritional benefits. Brace yourself for a delightful infusion of 60mg of caffeine, providing the perfect pick-me-up. Revel in the added benefits of a rich source of vitamin B5, vitamin B6, and vitamin B12. Immerse your senses in the refreshing tropical citrus flavor, expertly crafted with other natural flavors to ensure a memorable taste adventure. Embrace the energizing elements of caffeine, making this beverage a perfect companion for those seeking both a flavorful and revitalizing drink. With a commitment to delivering a win-win for your taste buds and well-being, our concoction promises great taste, more nutrients, and an invigorating experience.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "With Love Raspberry Dark Chocolate Zero Sugar",
+      "image": "with_love_raspberry_dark_chocolate.png",
+      "category_name": "vitamin water",
+      "description": "Indulge in our zero-sugar, zero-calorie electrolyte-enhanced water beverage designed to replenish lost fluids and invigorate your senses. Immerse yourself in the passionate fusion of raspberry and dark chocolate flavors, offering a subtly sweet taste experience. Our meticulously crafted concoction includes essential vitamins A, C, E, B3, B5, B6, and B12, ensuring a well-rounded and nourishing hydration option. With the added benefits of magnesium, this beverage goes beyond simple refreshment, providing a unique and revitalizing touch to your on-the-go lifestyle. Quench your thirst with the perfect blend of taste and functionality—ideal for those seeking a refreshing and hydrating companion while on the move.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Forever You Coconut Lime",
+      "image": "forever_you_coconut_lime.png",
+      "category_name": "vitamin water",
+      "description": "Immerse yourself in the world of revitalizing hydration with our zero-sugar, zero-calorie electrolyte-enhanced water beverage. Crafted to help replace lost fluids, this refreshing concoction boasts a delightful blend of coconut and lime flavors, offering a subtly sweet taste experience. Enriched with essential vitamins A, C, E, B3, B5, B6, and B12, this beverage provides a nourishing and well-rounded hydration option. Elevating its wellness quotient, our creation includes white curcumin, adding an extra layer of goodness to your on-the-go lifestyle. Quench your thirst with this harmonious fusion of taste and functionality, making it the perfect companion for those seeking a refreshing and hydrating beverage on the move.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "XXX Açai Blueberry Pomegranate Zero Sugar",
+      "image": "acai_blueberry_pomegranate_zero_sugar.png",
+      "category_name": "vitamin water",
+      "description": "Indulge in the triple delight of taste, nutrition, and wellness with XXX Açai Blueberry Pomegranate. This zero-sugar, nutrient-enhanced water beverage brings you a great taste without the guilt. Packed with three types of antioxidants—vitamin A, vitamin C, and selenium—it actively combats free radicals. Additionally, enjoy the benefits of vitamin B5, B6, and B12 for a nutrient boost. The delicious fusion of açai-blueberry-pomegranate flavor, complemented by other natural flavors, ensures a refreshing experience with every sip. Embrace a healthier choice with zero sugar and more nutrients in this win-win-win beverage.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Shine Strawberry Lemonade Zero Sugar",
+      "image": "shine_strawberry_lemonade_zero_sugar.png",
+      "category_name": "vitamin water",
+      "description": "Experience the radiance of health with Shine Strawberry Lemonade, a zero-sugar nutrient-enhanced water beverage that combines great taste with essential nutrients. This win-win-win drink is fortified with biotin and vitamin A, along with a rich source of vitamin B5, B6, and B12. Revel in the delicious taste of strawberry lemonade flavor, complemented by other natural flavors. With zero sugar and a nutrient-packed formula, Shine Strawberry Lemonade is your go-to choice for a refreshing and nourishing beverage that supports your well-being.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Rise Orange Zero Sugar",
+      "image": "rise_orange_zero_sugar.png",
+      "category_name": "vitamin water",
+      "description": "Elevate your hydration with Rise Orange Zero Sugar — a vitamin and nutrient-enhanced water beverage that brings together great taste, more nutrients, and zero sugar. Formulated with electrolytes and other essential components, this zero-sugar drink contains 250% vitamin C and 25% zinc, supporting normal immune function. Enjoy the delicious taste of orange flavor with other natural flavors, guilt-free. With a multi-pack ring carrier containing 50% post-consumer recycled content, Rise Orange Zero Sugar is your go-to choice for a refreshing and health-conscious beverage.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Power-C Dragonfruit Zero Sugar",
+      "image": "power_c_dragonfruit_zero_sugar.png",
+      "category_name": "vitamin water",
+      "description": "Experience a boost with Power-C Dragonfruit Zero Sugar, a nutrient-enhanced water beverage designed for great taste, more nutrients, and zero sugar. This powerful concoction features 200% antioxidant vitamin C, along with 100% of vitamins B5, B6, and B12. Infused with chromium, 25 mg taurine, zinc, and electrolytes, it provides comprehensive support for normal immune function. Embrace the delicious taste of dragonfruit flavor with other natural flavors, making hydration both enjoyable and beneficial.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Gutsy Watermelon Peach Zero Sugar",
+      "image": "gutsy_watermelon_peach_zero_sugar.png",
+      "category_name": "vitamin water",
+      "description": "Indulge in the goodness of Gutsy Watermelon Peach Zero Sugar, a zero-sugar nutrient-enhanced water beverage crafted for great taste and more nutrients. This winning combination includes 5g of prebiotic fiber, designed to support gut health. Enjoy the delicious taste of watermelon peach flavor with other natural flavors, making it a delightful and nourishing choice for those seeking a refreshing beverage without compromising on health.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Squeezed Lemonade Zero Sugar",
+      "image": "squeezed_lemonade_zero_sugar.png",
+      "category_name": "vitamin water",
+      "description": "Experience the refreshing goodness of Squeezed Lemonade Zero Sugar—a delightful and nutrient-packed beverage for great taste and more nutrients. This zero-sugar lemonade offers a winning combination of delicious taste with other natural flavors, making it a guilt-free indulgence. Packed with essential vitamins and minerals, it stands as a good source of nutrition. The multi-pack ring carrier is designed with sustainability in mind, containing 50% post-consumer recycled content.",
+      "brand": "Vitamin Water"
+    },
+    {
+      "name": "Sparkling Cosmic Vibe",
+      "image": "sparkling_cosmic_vibe.png",
+      "category_name": "energy drinks",
+      "description": "Indulge in the celestial taste of Celcius Cosmic Vibe—a sparkling and vibrant fruit punch flavor that takes your taste buds on an infinite and refreshing sensory journey. Immerse yourself in the cosmic mystery inspired by a mystic galaxy, with exotic and sweet notes of strawberry, lemon, orange, mandarin, and blueberry. This juicy flavor is out of this world, offering a unique and invigorating experience with every sip.",
+      "brand": "Celcius"
+    },
+    {
+      "name": "Sparkling Green Apple Cherry",
+      "image": "sparkling_green_apple_cherry.png",
+      "category_name": "energy drinks",
+      "description": "Indulge in the classic blend of crisp green apple and sweet cherry flavors with Celcius Sparkling Green Apple Cherry. Inspired by the nostalgia of classic candy apples, this refreshing and bold flavor combo energizes and electrifies the tastebuds. Satisfy your sweet tooth and leave your mouth watering with the invigorating and refreshing energy of this sparkling new Celcius flavor.",
+      "brand": "Celcius"
+    },
+    {
+      "name": "Sparkling Lemon Lime",
+      "image": "sparkling_lemon_lime.png",
+      "category_name": "energy drinks",
+      "description": "When life gives you lemons, add a little twist with Celcius Sparkling Lemon Lime! This crisp and refreshing flavor combines the perfect balance of citrusy sweet lemons and juicy, zesty limes. With just the right blend of tart and sweet, Lemon Lime offers the perfect balance of flavor and energy to quench your tastebuds.",
+      "brand": "Celcius"
+    },
+    {
+      "name": "Sparkling Strawberry Lemonade",
+      "image": "sparkling_strawberry_lemonade.png",
+      "category_name": "energy drinks",
+      "description": "Open up the refreshing flavors of summer and energize your day with Celcius Sparkling Strawberry Lemonade! Made with clinically proven ingredients, this carbonated flavor of CELSIUS has the perfect balance of flavor and energy that serves as an awesome pick-me-up for active lifestyles.",
+      "brand": "Celcius"
+    },
+    {
+      "name": "Sparkling Peach Vibe",
+      "image": "sparkling_peach_vibe.png",
+      "category_name": "energy drinks",
+      "description": "Enjoy nothing but good vibes with Celcius Sparkling Peach Vibe! Peach Vibe is deliciously sweet and 100% refreshing. Made with clinically proven ingredients, this carbonated flavor of CELSIUS has the perfect balance of flavor and energy that serves as an awesome pick-me-up for active lifestyles.",
+      "brand": "Celcius"
+    },
+
+    {
+      "name": "Sparkling Orange",
+      "image": "sparkling_orange.png",
+      "category_name": "energy drinks",
+      "description": "Start your day feeling refreshed and re-energized while enjoying the rich, juicy flavor of oranges! Made with clinically proven ingredients, this carbonated flavor of CELSIUS has the perfect balance of flavor and energy that serves as an awesome pick-me-up for active lifestyles.",
+      "brand": "Celsius"
+    },
+    {
+      "name": "Sparkling Wild Berry",
+      "image": "sparkling_wild_berry.png",
+      "category_name": "energy drinks",
+      "description": "Give your workout all you've got while enjoying the sweet taste of delicious wild berries! Made with clinically proven ingredients, this carbonated flavor of CELSIUS has the perfect balance of flavor and energy that serves as an awesome pick-me-up for active lifestyles.",
+      "brand": "Celsius"
+    },
+    {
+      "name": "Sparkling Oasis Vibe",
+      "image": "sparkling_oasis_vibe.png",
+      "category_name": "energy drinks",
+      "description": "The bright and succulent Prickly Pear cactus is a sensational fusion of watermelon, kiwi, and bubblegum flavors that are combined with a zesty citrus finish to help make CELSIUS Oasis Vibe mind-blowingly delicious. Taste an Oasis - This sweet and delicate flavor profile will transport you to a lush, refreshing, desert oasis!",
+      "brand": "Celsius"
+    },
+    {
+      "name": "Sparkling Fantasy Vibe",
+      "image": "sparkling_fantasy_vibe.png",
+      "category_name": "energy drinks",
+      "description": "Bursting with the crisp sweetness of a mandarin and indulgence of a velvety marshmallow, CELSIUS Fantasy Vibe gives you the perfect flavor combination of a fun treat. This sparkling flavor has a bright citrusy profile with an end note of creamy marshmallow similar to an Orangesicle taste.",
+      "brand": "Celsius"
+    },
+    {
+      "name": "Sparkling Watermelon",
+      "image": "sparkling_watermelon.png",
+      "category_name": "energy drinks",
+      "description": "Need an afternoon pick-me-up? Re-focus on your goals and recharge your energy with CELSIUS Sparkling Watermelon! Made with clinically proven ingredients, this carbonated flavor of CELSIUS has the perfect balance of flavor and energy that serves as an awesome pick-me-up for active lifestyles.",
+      "brand": "Celsius"
+    },
+    {
+      "name": "Sparkling Cola",
+      "image": "sparkling_cola.png",
+      "category_name": "energy drinks",
+      "description": "Sip on a refreshing can of cola guilt-free knowing that CELSIUS Sparkling Cola has no sugar and is low in sodium! Made with clinically proven ingredients, this carbonated flavor of CELSIUS has the perfect balance of flavor and energy that serves as an awesome pick-me-up for active lifestyles.",
+      "brand": "Celsius"
+    },
+    {
+      "name": "Peach Mango Green Tea",
+      "image": "peach_mango_green_tea.png",
+      "category_name": "energy drinks",
+      "description": "Peach Mango Green Tea is one of CELSIUS' non-carbonated flavors and it's just as delicious as it sounds. Made with clinically proven ingredients, this flavor of CELSIUS has the perfect balance of flavor and energy that serves as an awesome pick-me-up for active lifestyles.",
+      "brand": "Celsius"
+    },
+    {
+      "name": "Sparkling Fuji Apple Pear",
+      "image": "sparkling_fuji_apple_pear.png",
+      "category_name": "energy drinks",
+      "description": "Boost your energy while enjoying the crisp, delicious combination of Fuji apple and pear! Made with clinically proven ingredients, this carbonated flavor of CELSIUS has the perfect balance of flavor and energy that serves as an awesome pick-me-up for active lifestyles.",
+      "brand": "Celsius"
+    },
+    {
+      "name": "Red Bull Winter Edition",
+      "image": "red_bull_winter_edition.png",
+      "category_name": "energy drinks",
+      "description": "The Red Bull Winter Edition with the taste of pear, accented with a dash of cinnamon*. Ready for winter? Red Bull gives you wiiings.",
+      "brand": "Red Bull"
+    },
+    {
+      "name": "Red Bull Amber Edition",
+      "image": "red_bull_amber_edition.png",
+      "category_name": "energy drinks",
+      "description": "The Red Bull Amber Edition offers the perfect blend of Strawberry and Apricot with a touch of peach* taste.",
+      "brand": "Red Bull"
+    },
+    {
+      "name": "Red Bull",
+      "image": "red_bull.png",
+      "category_name": "energy drinks",
+      "description": "Red Bull Energy Drink is a globally renowned beverage that invigorates both body and mind. Embraced by elite athletes, dynamic professionals, students navigating their academic journeys, and long-haul travelers, this iconic drink is synonymous with unparalleled energy and focus. Crafted with a unique blend of high-quality ingredients, Red Bull stands as a beacon of vitality and endurance. Elevate your senses and seize the day with Red Bull, the quintessential choice for those who demand the best in energy refreshment.",
+      "brand": "Red Bull"
+    },
+    {
+      "name": "Red Bull Sugarfree",
+      "image": "red_bull_sugarfree.png",
+      "category_name": "energy drinks",
+      "description": "Experience the exhilaration of Wiiings without sugars with Red Bull Sugarfree. This variation of the iconic Red Bull Energy Drink retains the same dynamic essence but without the sugars. Offering a sugar-free alternative without compromising on the invigorating taste and energizing properties, Red Bull Sugarfree is the go-to choice for those seeking a refreshingly sweet and sugar-free energy boost.",
+      "brand": "Red Bull"
+    },
+    {
+      "name": "Red Bull Yellow Edition",
+      "image": "red_bull_yellow_edition.png",
+      "category_name": "energy drinks",
+      "description": "Indulge in the vibrant and exotic taste of tropical fruits with Red Bull Yellow Edition. This edition offers a sensory journey through the lush and flavorful world of tropical goodness. A perfect blend of invigorating energy and the enticing essence of tropical fruits*, Red Bull Yellow Edition is designed to elevate your taste experience and provide a refreshing boost whenever you need it.",
+      "brand": "Red Bull"
+    },
+    {
+      "name": "Prime Original Energy",
+      "image": "prime_original_energy.png",
+      "category_name": "energy drinks",
+      "description": "Elevate your energy levels with Prime Original Energy. This invigorating beverage is a powerhouse of vitality, carefully crafted to provide you with the boost you need. With zero sugar, 200mg of caffeine, and 355mg of electrolytes, Prime Original Energy is designed to fuel your active lifestyle. Vegan-friendly and suitable for ages 18 and above, it's the perfect companion for those who demand more from their energy drink. Unleash the power within with Prime Original Energy.",
+      "brand": "Prime"
+    },
+    {
+      "name": "Prime Ice Pop Energy",
+      "image": "prime_ice_pop_energy.png",
+      "category_name": "energy drinks",
+      "description": "Indulge in the cool and refreshing energy of Prime Ice Pop Energy. This invigorating beverage, now available in a convenient 12-pack, is a delightful fusion of flavor and vitality. With zero sugar, 200mg of caffeine, and 355mg of electrolytes, Prime Ice Pop Energy is your guilt-free, vegan-friendly energy boost. Perfect for ages 18 and above, it's the ideal choice for those who crave a burst of energy without compromise. Embrace the chill and energy with Prime Ice Pop Energy.",
+      "brand": "Prime"
+    },
+    {
+      "name": "Prime Strawberry Watermelon Energy",
+      "image": "prime_strawberry_watermelon_energy.png",
+      "category_name": "energy drinks",
+      "description": "Experience the delightful fusion of flavors with Prime Strawberry Watermelon Energy. This energy-packed beverage, now available in a convenient 12-pack, delivers a burst of vitality without compromising on taste. With zero sugar, 200mg of caffeine, and 355mg of electrolytes, it's the perfect choice for those seeking a refreshing and energizing drink. Vegan-friendly and suitable for ages 18 and above, Prime Strawberry Watermelon Energy is crafted to invigorate your senses.",
+      "brand": "Prime"
+    },
+    {
+      "name": "Prime Blue Raspberry Energy",
+      "image": "prime_blue_raspberry_energy.png",
+      "category_name": "energy drinks",
+      "description": "Indulge in the bold and electrifying taste of Prime Blue Raspberry Energy. Now available in a convenient 12-pack, this energy drink offers a powerful blend of flavor and vitality. With zero sugar, 200mg of caffeine, and 355mg of electrolytes, it's the ideal choice for those who demand an energy boost without compromise. Vegan-friendly and suitable for ages 18 and above, Prime Blue Raspberry Energy is your go-to for a refreshing and invigorating experience.",
+      "brand": "Prime"
+    },
+    {
+      "name": "Prime Tropical Punch Energy",
+      "image": "prime_tropical_punch_energy.png",
+      "category_name": "energy drinks",
+      "description": "Transport yourself to a tropical paradise with Prime Tropical Punch Energy. This 12-pack of energy goodness combines the sweetness of tropical fruits with the power of caffeine and electrolytes. With zero sugar, 200mg of caffeine, and 355mg of electrolytes, it's the perfect choice for those who crave a burst of energy. Vegan-friendly and suitable for ages 18 and above, Prime Tropical Punch Energy is your passport to a refreshing and revitalizing experience.",
+      "brand": "Prime"
+    },
+    {
+      "name": "Prime Orange Mango Energy",
+      "image": "prime_orange_mango_energy.png",
+      "category_name": "energy drinks",
+      "description": "Savor the tangy sweetness of Prime Orange Mango Energy. Now available in a convenient 12-pack, this energy drink combines citrusy orange with the tropical goodness of mango. With zero sugar, 200mg of caffeine, and 355mg of electrolytes, it's the perfect choice for those seeking a flavorful and energizing beverage. Vegan-friendly and suitable for ages 18 and above, Prime Orange Mango Energy is crafted to reinvigorate your taste buds.",
+      "brand": "Prime"
+    },
+    {
+      "name": "Prime Lemon Lime Energy",
+      "image": "prime_lemon_lime_energy.png",
+      "category_name": "energy drinks",
+      "description": "Elevate your senses with the zesty goodness of Prime Lemon Lime Energy. This 12-pack of energy delight combines the crispness of lemon with the tangy twist of lime. With zero sugar, 200mg of caffeine, and 355mg of electrolytes, it's the perfect choice for those who crave a refreshing and invigorating drink. Vegan-friendly and suitable for ages 18 and above, Prime Lemon Lime Energy is your go-to for a burst of revitalizing energy.",
+      "brand": "Prime"
+    },
+    {
+      "name": "Pure Leaf Unsweetened Real Brewed Tea",
+      "image": "pure_leaf_unsweetened_real_brewed_tea.png",
+      "category_name": "iced tea",
+      "description": "Experience the simplicity of real and refreshing tea with Pure Leaf Unsweetened Real Brewed Tea. Each bottle is a result of the love and attention given to tea leaves before being freshly bottled and sealed. This is not your average tea; it's a leaf-brewed masterpiece, free from powder or concentrate. Embrace the real and simple pleasures in life with Pure Leaf.",
+      "brand": "Pure Leaf"
+    },
+    {
+      "name": "Liquid Death Iced Black Tea/Lemonade, Dead Billionaire",
+      "image": "liquid_death_iced_black_tea_lemonade.png",
+      "category_name": "iced tea",
+      "description": "Liquid Death Iced Black Tea/Lemonade is not your typical beverage; it's a can of half iced black tea and half lemonade on a mission. Infused with natural agave and B vitamins, it ruthlessly murders your thirst, leaving its insides as balloon animals for children's birthday parties. Brace yourself for a savagely refreshing experience.",
+      "brand": "Liquid Death"
+    },
+    {
+      "name": "AriZona Green Tea with Ginseng and Honey",
+      "image": "arizona_green_tea_ginseng_honey.png",
+      "category_name": "iced tea",
+      "description": "AriZona's best-selling green tea is a classic that stands the test of time. America's favorite, this 100% natural AriZona Green Tea is infused with just the right amount of ginseng and honey. Whether enjoyed iced or hot, it delivers a delicious blend of goodness that's as timeless as it is tasty.",
+      "brand": "AriZona"
+    },
+    {
+      "name": "Pure Leaf Unsweetened Green Tea",
+      "image": "pure_leaf_unsweetened_green_tea.png",
+      "category_name": "iced tea",
+      "description": "Savor the real and simple pleasures in life with Pure Leaf Unsweetened Green Tea. Crafted with love and attention, this leaf-brewed masterpiece is freshly bottled and sealed, offering a refreshing tea experience free from powder or concentrate. Embrace the authentic taste of green tea with Pure Leaf.",
+      "brand": "Pure Leaf"
+    },
+    {
+      "name": "Zevia Organic Sugar Free Iced Tea, Caffeine Free Hibiscus Tea Passionfruit",
+      "image": "zevia.png",
+      "category_name": "iced tea",
+      "description": "Indulge in the caffeine-free goodness of Zevia Organic Sugar Free Iced Tea. This hibiscus tea with passionfruit offers an organic and invigorating experience. Sip on the perfect blend of flavors while enjoying the benefits of a refreshing and natural beverage.",
+      "brand": "Zevia"
+    },
+    {
+      "name": "Snapple Zero Sugar Peach Tea",
+      "image": "snapple_zero_sugar_peach_tea.png",
+      "category_name": "iced tea",
+      "description": "Snapple Zero Sugar Peach Tea is perfectly peachy and big on flavor. Made from a fine blend of black and green tea leaves with classic peach flavor, it's low in calories, gluten-free, and naturally flavored. Satisfy your peach cravings guilt-free with Snapple Zero Sugar Peach Tea.",
+      "brand": "Snapple"
+    },
+    {
+      "name": "Pure Leaf Unsweetened Black Tea with Lemon",
+      "image": "pure_leaf_unsweetened_black_tea_lemon.png",
+      "category_name": "iced tea",
+      "description": "Say no to artificial flavors and powders with Pure Leaf Unsweetened Black Tea with Lemon. Crafted with real brewed tea leaves and water, this iced tea is authentically brewed to perfection. Reject the unnecessary in tea and in life, and say yes to the refreshing tartness of lemon in every sip.",
+      "brand": "Pure Leaf"
+    },
+    {
+      "name": "Snapple Zero Sugar Raspberry Tea",
+      "image": "snapple_zero_sugar_raspberry_tea.png",
+      "category_name": "iced tea",
+      "description": "Experience the unique blend of ripe red raspberries and delicious iced tea with Snapple Zero Sugar Raspberry Tea. Low in calories, gluten-free, and naturally flavored, it's the perfect guilt-free treat. Sip on the flavorful goodness and discover why Snapple always brings the flavor.",
+      "brand": "Snapple"
+    },
+    {
+      "name": "Arizona Arnold Palmer Half Tea Lemonade",
+      "image": "arizona_arnold_palmer_half_tea_lemonade.png",
+      "category_name": "iced tea",
+      "description": "Indulge in the real sugar goodness of Arizona Arnold Palmer Half Tea Lemonade. This refreshing beverage is 100% natural, free from artificial flavors, coloring, and preservatives commonly found in powdered iced tea drinks. Enjoy the real brewed tea experience wherever you are.",
+      "brand": "Arizona"
+    },
+
+    {
+      "name": "S.Pellegrino Sparkling Natural Mineral Water",
+      "image": "s_pellegrino_sparkling_mineral_water.png",
+      "category_name": "sparkling water",
+      "description": "S.Pellegrino is the epitome of sparkling natural mineral water, designed to bring a little sparkle to your day. Perfect for enjoying at home or on the go, these gentle bubbles can turn any fine food moment into a special occasion, from an al fresco picnic to a beach gathering.",
+      "brand": "S.Pellegrino"
+    },
+    {
+      "name": "S.Pellegrino Essenza Dark Morello Cherry & Pomegranate",
+      "image": "s_pellegrino_essenza_cherry_pomegranate.png",
+      "category_name": "sparkling water",
+      "description": "Savor a powerful aroma, gentle bubbles, and intense fruit-flavored notes with S.Pellegrino Essenza Dark Morello Cherry & Pomegranate. Ideal for tasteful moments, this beverage provides a refreshing and flavorful experience in a sleek 330ml can.",
+      "brand": "S.Pellegrino"
+    },
+    {
+      "name": "S.Pellegrino Essenza Lemon & Lemon Zest",
+      "image": "s_pellegrino_essenza_lemon_zest.png",
+      "category_name": "sparkling water",
+      "description": "Enjoy the gentle bubbles of S.Pellegrino in a 330ml sleek can with Essenza Lemon & Lemon Zest. Turn any outdoor picnic or beach gathering into a special occasion with this refreshingly citrusy beverage.",
+      "brand": "S.Pellegrino"
+    },
+    {
+      "name": "S.Pellegrino Essenza Blood Orange & Black Raspberry",
+      "image": "s_pellegrino_essenza_blood_orange_raspberry.png",
+      "category_name": "sparkling water",
+      "description": "S.Pellegrino bubbles reveal notes of sweet citrus in Essenza Blood Orange & Black Raspberry, keeping the palate fresh and light. Whether enjoyed on its own or with a light meal, this beverage provides a delightful taste experience.",
+      "brand": "S.Pellegrino"
+    },
+    {
+      "name": "S.Pellegrino Essenza Tangerine & Wild Strawberry",
+      "image": "s_pellegrino_essenza_tangerine_strawberry.png",
+      "category_name": "sparkling water",
+      "description": "Enjoy the citrusy notes of tangerine balanced with the flavor of wild strawberries and the signature gentle bubbles of S.Pellegrino Essenza. Ideal for pairing with light bites, this beverage is perfect at any time of day.",
+      "brand": "S.Pellegrino"
+    },
+    {
+      "name": "S.Pellegrino Essenza Pink Grapefruit & Citrus Blend",
+      "image": "s_pellegrino_essenza_pink_grapefruit_citrus.png",
+      "category_name": "sparkling water",
+      "description": "Indulge in the powerful blend of pink grapefruit and citrus flavors heightened by gentle bubbles in S.Pellegrino Essenza Pink Grapefruit & Citrus Blend. Fresh, smooth, and persistent, it pairs well with full-flavored dishes.",
+      "brand": "S.Pellegrino"
+    },
+    {
+      "name": "Perrier Sparkling Water",
+      "image": "perrier_sparkling_water.png",
+      "category_name": "sparkling water",
+      "description": "Elegant and refreshing, PERRIER Sparkling Water has delighted beverage enthusiasts for over 150 years. With its blend of bubbles and balanced mineral content, it's a thirst-quenching choice with no sugar and zero calories. Enjoy it on its own or as a perfect partner for cocktails and drink recipes.",
+      "brand": "Perrier"
+    },
+    {
+      "name": "Perrier Pineapple Sparkling Water",
+      "image": "perrier_pineapple_sparkling_water.png",
+      "category_name": "sparkling water",
+      "description": "Experience the delicate tropical pineapple flavor of PERRIER Pineapple Flavored Carbonated Mineral Water. With zero calories and zero sweeteners, this sparkling beverage offers a refreshing and sophisticated choice to satisfy your thirst.",
+      "brand": "Perrier"
+    },
+    {
+      "name": "Perrier Peach Sparkling Water",
+      "image": "perrier_peach_sparkling_water.png",
+      "category_name": "sparkling water",
+      "description": "Indulge in the mouthwatering Peach flavor of PERRIER Peach Flavored Carbonated Mineral Water. With zero calories and zero sweeteners, it's a sparkling fusion of air and water that thoroughly quenches your thirst. Add zest to your morning or serve as an afternoon refresher.",
+      "brand": "Perrier"
+    },
+    {
+      "name": "Perrier Strawberry Sparkling Water",
+      "image": "perrier_strawberry_sparkling_water.png",
+      "category_name": "sparkling water",
+      "description": "Quench your thirst or cleanse your palate with Strawberry-flavored PERRIER Carbonated Mineral Water. With just a hint of ripe strawberry flavor, it offers a zero-calorie, zero-sweetener alternative to soft drinks. Born in the south of France, PERRIER has delighted people worldwide for over 150 years.",
+      "brand": "Perrier"
+    },
+    {
+      "name": "Perrier Lime Sparkling Water",
+      "image": "perrier_lime_sparkling_water.png",
+      "category_name": "sparkling water",
+      "description": "Lime-flavored PERRIER Carbonated Mineral Water brings a classic cocktail twist to your drink. With zero calories and zero sweeteners, the citrus zing produces a crisply refreshing beverage that's perfect for any situation. Born in the south of France, PERRIER has delighted people worldwide for over 150 years.",
+      "brand": "Perrier"
+    },
+    {
+      "name": "Perrier Pink Grapefruit Sparkling Water",
+      "image": "perrier_pink_grapefruit_sparkling_water.png",
+      "category_name": "sparkling water",
+      "description": "Enjoy the bracing tartness and unmistakable tang of refreshness with Pink Grapefruit-flavored PERRIER Carbonated Mineral Water. Ideal for your active lifestyle, it contains zero calories and zero sweeteners. Born in the south of France, PERRIER has been delighting people worldwide for over 150 years.",
+      "brand": "Perrier"
+    },
+    {
+      "name": "Perrier Orange Sparkling Water",
+      "image": "perrier_orange_sparkling_water.png",
+      "category_name": "sparkling water",
+      "description": "Combining the tangy flavors of orange and lemon, L'Orange PERRIER Carbonated Mineral Water offers a subtly citrusy taste. With zero calories and zero sweeteners, it's a refreshing choice 24 hours a day. Born in the south of France, PERRIER has been delighting people worldwide for over 150 years.",
+      "brand": "Perrier"
+    },
+    {
+      "name": "La Croix Pure",
+      "image": "la_croix_pure.png",
+      "category_name": "sparkling water",
+      "description": "Pure-ly Perfect! La Croix Pure, the classic unflavored sparkling water, is crisp, clean, and thirst-quenching.",
+      "brand": "La Croix"
+    },
+    {
+      "name": "La Croix Lime",
+      "image": "la_croix_lime.png",
+      "category_name": "sparkling water",
+      "description": "Classic Crowd Pleaser! La Croix Lime is a refreshing citrus zest, like a fresh lime just picked from the tree.",
+      "brand": "La Croix"
+    },
+    {
+      "name": "La Croix Razz-Cranberry",
+      "image": "la_croix_razz_cranberry.png",
+      "category_name": "sparkling water",
+      "description": "Mix It Up! La Croix Razz-Cranberry is a flavorful combination of sweet and tart, providing a delightful taste experience.",
+      "brand": "La Croix"
+    },
+    {
+      "name": "La Croix Orange",
+      "image": "la_croix_orange.png",
+      "category_name": "sparkling water",
+      "description": "The Sunny Side of Life! La Croix Orange offers the aroma of freshly squeezed oranges with a natural lively citrus delivery.",
+      "brand": "La Croix"
+    },
+    {
+      "name": "La Croix Lemon",
+      "image": "la_croix_lemon.png",
+      "category_name": "sparkling water",
+      "description": "A Lively Lemon Delight! La Croix Lemon is a bright flavor, slightly tart and sweet, providing a refreshing beverage option.",
+      "brand": "La Croix"
+    },
+    {
+      "name": "La Croix Peach-Pear",
+      "image": "la_croix_peach_pear.png",
+      "category_name": "sparkling water",
+      "description": "A Peach-Pear Combo! La Croix Peach-Pear is a delightful combination with hints of each, offering a unique and enjoyable taste.",
+      "brand": "La Croix"
+    },
+    {
+      "name": "La Croix Berry",
+      "image": "la_croix_berry.png",
+      "category_name": "sparkling water",
+      "description": "Berry Delicious! La Croix Berry is a subtle fruity berry blend, providing a delicious and refreshing sparkling water option.",
+      "brand": "La Croix"
+    },
+    {
+      "name": "Bubly Sparkling Water Lime",
+      "image": "bubly_sparkling_water_lime.png",
+      "category_name": "sparkling water",
+      "description": "Experience the crisp and refreshing taste of lime with Bubly Sparkling Water Lime. Quench your thirst with this delightful beverage.",
+      "brand": "Bubly"
+    },
+    {
+      "name": "Bubly Sparkling Water Cherry",
+      "image": "bubly_sparkling_water_cherry.png",
+      "category_name": "sparkling water",
+      "description": "Indulge in the sweet and bold flavor of cherries with Bubly Sparkling Water Cherry. A delicious and fizzy refreshment awaits.",
+      "brand": "Bubly"
+    },
+    {
+      "name": "Bubly Sparkling Water Grapefruit",
+      "image": "bubly_sparkling_water_grapefruit.png",
+      "category_name": "sparkling water",
+      "description": "Awaken your taste buds with the tangy and citrusy goodness of Bubly Sparkling Water Grapefruit. A zesty and satisfying choice.",
+      "brand": "Bubly"
+    },
+    {
+      "name": "Bubly Sparkling Water Strawberry",
+      "image": "bubly_sparkling_water_strawberry.png",
+      "category_name": "sparkling water",
+      "description": "Savor the sweetness of ripe strawberries in every sip of Bubly Sparkling Water Strawberry. A delightful and fruity sparkling water.",
+      "brand": "Bubly"
+    },
+    {
+      "name": "Bubly Sparkling Water Raspberry",
+      "image": "bubly_sparkling_water_raspberry.png",
+      "category_name": "sparkling water",
+      "description": "Enjoy the vibrant and juicy flavor of raspberries with Bubly Sparkling Water Raspberry. A bubbly and refreshing beverage choice.",
+      "brand": "Bubly"
+    },
+    {
+      "name": "Bubly Sparkling Water Mango",
+      "image": "bubly_sparkling_water_mango.png",
+      "category_name": "sparkling water",
+      "description": "Transport yourself to the tropics with the exotic taste of mango in Bubly Sparkling Water Mango. A tropical and fizzy delight.",
+      "brand": "Bubly"
+    },
+    {
+      "name": "Bubly Sparkling Water Blackberry",
+      "image": "bubly_sparkling_water_blackberry.png",
+      "category_name": "sparkling water",
+      "description": "Delight in the rich and flavorful essence of blackberries with Bubly Sparkling Water Blackberry. A bold and refreshing choice.",
+      "brand": "Bubly"
+    },
+    {
+      "name": "Bubly Sparkling Water Passionfruit",
+      "image": "bubly_sparkling_water_passionfruit.png",
+      "category_name": "sparkling water",
+      "description": "Experience the exotic and tropical vibes with Bubly Sparkling Water Passionfruit. A passionate and effervescent beverage option.",
+      "brand": "Bubly"
+    }
+  ]
+}
