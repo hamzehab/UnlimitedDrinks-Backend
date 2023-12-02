@@ -186,6 +186,19 @@ async def get_product_by_id(product_id: int):
         raise HTTPException(status_code=404, detail=str(e))
 
 
+@router.get("/product/cart/{product_id}")
+async def can_add_to_cart(product_id: int, quantity: int):
+    try:
+        product = await Product.get(id=product_id)
+        if quantity <= product.quantity:
+            return {"can_add": True}
+        else:
+            return {"can_add": False, "quantity": product.quantity}
+    except Exception as e:
+        logger.info(str(e))
+        raise HTTPException(status_code=404, detail=str(e))
+
+
 @router.get("/roulette", response_model=list[ProductModel], tags=["product"])
 async def get_four_random_products():
     try:
