@@ -51,7 +51,7 @@ async def add_review(product_id: int, customer_id: str, review: ReviewCreate):
             raise HTTPException(status_code=404, detail=str(e))
     else:
         raise HTTPException(
-            status_code=405, detail="Cannot leave multiple reviews for one item"
+            status_code=202, detail="Cannot leave multiple reviews for one item"
         )
 
 
