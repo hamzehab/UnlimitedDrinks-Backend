@@ -38,12 +38,28 @@ async def filter_reviews_by_rating(product_id: int):
 
 @router.post("/{product_id}/{customer_id}")
 async def add_review(product_id: int, customer_id: str, review: ReviewCreate):
-    try:
-        review.rating = int(review.rating)
-        await Review.create(
-            **dict(review), customer_id=customer_id, product_id=product_id
+    check = await did_customer_leave_review(product_id, customer_id)
+    if not check:
+        try:
+            review.rating = int(review.rating)
+            await Review.create(
+                **dict(review), customer_id=customer_id, product_id=product_id
+            )
+            return {"message": "Review added successfully"}
+        except Exception as e:
+            logger.error(str(e))
+            raise HTTPException(status_code=404, detail=str(e))
+    else:
+        raise HTTPException(
+            status_code=405, detail="Cannot leave multiple reviews for one item"
         )
-        return {"message": "Review added successfully"}
+
+
+@router.get("/{product_id}/{customer_id}")
+async def did_customer_leave_review(product_id: int, customer_id: str):
+    try:
+        await Review.get(product_id=product_id, customer_id=customer_id)
+        return True
     except Exception as e:
         logger.error(str(e))
-        raise HTTPException(status_code=404, detail=str(e))
+        return False
