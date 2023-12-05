@@ -68,6 +68,8 @@ async def get_product_by_id(product_id: int):
         product = await Product.get(id=product_id)
         category_name = await get_category_name(product)
         reviews = await product.reviews.all()
+        random.shuffle(reviews)
+
         if reviews:
             total_rating = sum(review.rating for review in reviews)
             rating = total_rating / len(reviews)
