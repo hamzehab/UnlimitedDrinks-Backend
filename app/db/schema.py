@@ -91,6 +91,7 @@ class Review(Model):
     product = fields.ForeignKeyField("models.Product", related_name="reviews")
     customer = fields.ForeignKeyField("models.Customer", related_name="reviews")
     rating = fields.IntEnumField(RatingEnum)
+    title = fields.CharField(max_length=255)
     comment = fields.TextField()
     created_at = fields.DatetimeField(auto_now_add=True)
     updated_at = fields.DatetimeField(auto_now=True)
@@ -103,7 +104,7 @@ class Review(Model):
 
 
 class StatusType(IntEnum):
-    PLACED = 0
+    PROCESSING = 0
     SHIPPED = 1
     DELIVERED = 2
 

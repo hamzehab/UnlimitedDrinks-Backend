@@ -1,16 +1,7 @@
 from datetime import datetime
 
+from api.review.models import ReviewModel
 from pydantic import BaseModel
-
-
-class ReviewModel(BaseModel):
-    id: int
-    product_id: int
-    customer_id: str
-    rating: int
-    comment: str
-    created_at: datetime
-    updated_at: datetime
 
 
 class ProductModel(BaseModel):
