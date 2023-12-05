@@ -1,5 +1,4 @@
 import json
-from contextlib import asynccontextmanager
 from random import randint, random
 
 from api.router import router
@@ -15,8 +14,39 @@ from tortoise.exceptions import DoesNotExist
 data = {}
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+register_tortoise(
+    app,
+    config={
+        "connections": {
+            "default": expand_db_url(str(settings.POSTGRES_URL), "asyncpg")
+        },
+        "apps": {
+            "models": {
+                "models": ["db.schema", "aerich.models"],
+                "default_connection": "default",
+            }
+        },
+    },
+    generate_schemas=True,
+    add_exception_handlers=True,
+)
+
+
+app.include_router(router)
+
+
+@app.on_event("startup")
+async def load_products():
     with open("app/db/data.json", "r") as file:
         data.update(json.load(file))
 
@@ -54,36 +84,3 @@ async def lifespan(app: FastAPI):
                 logger.info(f"Category {product['category']} not found")
                 logger.info(f"Product {product['name']} not created")
                 continue
-    yield
-    data.clear()
-
-
-app = FastAPI()
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-register_tortoise(
-    app,
-    config={
-        "connections": {
-            "default": expand_db_url(str(settings.POSTGRES_URL), "asyncpg")
-        },
-        "apps": {
-            "models": {
-                "models": ["db.schema", "aerich.models"],
-                "default_connection": "default",
-            }
-        },
-    },
-    generate_schemas=True,
-    add_exception_handlers=True,
-)
-
-
-app.include_router(router)
