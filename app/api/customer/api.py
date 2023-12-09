@@ -29,6 +29,7 @@ async def get_customer(customer_id: str):
         if not customer:
             raise HTTPException(status_code=404, detail="Customer not Found")
     except Exception:
+        logger.error("Customer Not Found")
         raise HTTPException(status_code=404, detail="Customer not Found")
 
     logger.info(f"Retrieved {customer_id}'s profile")
@@ -49,6 +50,7 @@ async def get_customer(customer_id: str):
             ),
         )
     except Exception as e:
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -70,6 +72,7 @@ async def create_customer(customer: CustomerCreate, address: AddressCreate):
             ),
         )
     except Exception as e:
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -103,4 +106,5 @@ async def edit_customer_name(customer_id: str, customer_name: dict):
             "last_name": updated_customer.last_name,
         }
     except Exception as e:
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))

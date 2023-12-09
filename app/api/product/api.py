@@ -44,7 +44,7 @@ async def get_all_products():
         logger.info(f"Retrieved {len(products)} products")
         return await get_product_reviews(products)
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -58,7 +58,7 @@ async def get_products_by_category(category_name: str):
         return await get_product_reviews(products)
 
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -83,7 +83,7 @@ async def get_product_by_id(product_id: int):
             rating=rating,
         )
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -109,6 +109,7 @@ async def search_for_products(query: str):
 
         return await get_product_reviews(products)
     except Exception as e:
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -121,5 +122,5 @@ async def get_four_random_products():
         return productList[:4]
 
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))

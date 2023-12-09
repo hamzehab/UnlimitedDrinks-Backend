@@ -169,7 +169,7 @@ async def get_orders(customer_id: str):
             )
         return response
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 

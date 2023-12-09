@@ -14,7 +14,7 @@ async def get_all_categories():
         logger.info("Retrieved all categories")
         return [CategoryModel(**dict(category)) for category in categories]
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail="Something went wrong")
 
 
@@ -28,6 +28,7 @@ async def does_category_exist(category_name: str):
         else:
             return False
     except Exception:
+        logger.error(f"Category: {category_name} does not exist")
         return False
 
 
@@ -49,7 +50,7 @@ async def create_category(category: CategoryCreate):
             )
 
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -59,7 +60,7 @@ async def delete_category(category_id: int):
         await Category.get(id=category_id).delete()
         return {"message": "Category deleted successfully"}
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -84,5 +85,5 @@ async def update_category(category_id: int, category: CategoryUpdate):
         }
 
     except Exception as e:
-        logger.info(str(e))
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
