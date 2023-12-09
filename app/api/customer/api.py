@@ -108,3 +108,17 @@ async def edit_customer_name(customer_id: str, customer_name: dict):
     except Exception as e:
         logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
+
+
+@router.delete("/delete/{customer_id}")
+async def delete_customer(customer_id: str):
+    try:
+        customer = await Customer.get(id=customer_id)
+        if customer:
+            await customer.delete()
+            return True
+        else:
+            return False
+    except Exception as e:
+        logger.error(str(e))
+        raise HTTPException(status_code=404, detail=str(e))
