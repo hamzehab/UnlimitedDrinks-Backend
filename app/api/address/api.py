@@ -2,6 +2,7 @@ from api.customer.api import does_customer_exist
 from db.schema import Address, Customer
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
+from loguru import logger
 
 from .models import AddressCreate, AddressModel, SingleAddressModel
 
@@ -12,6 +13,7 @@ router = APIRouter()
 async def get_customer_addresses(customer_id: str):
     customerExists = await does_customer_exist(customer_id)
     if not customerExists:
+        logger.error("Customer does not exist")
         raise HTTPException(status_code=404, detail="Customer does not exist")
 
     try:
@@ -25,6 +27,7 @@ async def get_customer_addresses(customer_id: str):
                 other_addresses.append(SingleAddressModel(**dict(address)))
         return AddressModel(main_address=main_address, addresses=other_addresses)
     except Exception as e:
+        logger.error(str(e))
         raise HTTPException(status_code=404, detail=str(e))
 
 
@@ -38,8 +41,10 @@ async def add_customer_address(customer_id: str, address: AddressCreate):
             )
             return SingleAddressModel(**dict(new_address))
         except Exception as e:
+            logger.error(str(e))
             raise HTTPException(status_code=404, detail=str(e))
     else:
+        logger.error("Customer not Found")
         raise HTTPException(status_code=404, detail="Customer not Found")
 
 
@@ -47,14 +52,19 @@ async def add_customer_address(customer_id: str, address: AddressCreate):
 async def change_main_address(customer_id: str, address_id: int):
     exists = await does_customer_exist(customer_id)
     if exists:
-        addresses = await Address.filter(customer_id=customer_id)
-        for address in addresses:
-            address.is_default = False
-            await address.save()
-        await Address.get(id=address_id).update(is_default=True)
-        return SingleAddressModel(**dict(address))
+        try:
+            addresses = await Address.filter(customer_id=customer_id)
+            for address in addresses:
+                address.is_default = False
+                await address.save()
+            await Address.get(id=address_id).update(is_default=True)
+            return SingleAddressModel(**dict(address))
+        except Exception as e:
+            logger.error(str(e))
+            raise HTTPException(status_code=404, detail=str(e))
 
     else:
+        logger.error("Customer not Found")
         raise HTTPException(status_code=404, detail="Customer not Found")
 
 
@@ -90,11 +100,35 @@ async def update_address(customer_id: str, address_id: int, address: AddressCrea
             updated_address = await Address.get(id=address_id)
             return SingleAddressModel(**dict(updated_address))
         except Exception as e:
+            logger.error(str(e))
             raise HTTPException(status_code=404, detail=str(e))
     else:
+        logger.error("Customer not found")
         raise HTTPException(status_code=404, detail="Customer not Found")
 
 
 @router.delete("/delete/{customer_id}/{address_id}")
-async def delete_selected_address():
-    pass
+async def delete_selected_address(customer_id: str, address_id: int):
+    try:
+        address = await Address.filter(id=address_id, customer_id=customer_id)
+        if address[0]:
+            await address[0].delete()
+            return True
+        else:
+            return False
+    except Exception as e:
+        logger.error(str(e))
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+@router.get("/isMain/{customer_id}/{address_id}")
+async def check_if_address_main(customer_id: str, address_id: int):
+    try:
+        address = await Address.get(id=address_id, customer_id=customer_id)
+        if address.is_default:
+            return True
+        else:
+            return False
+    except Exception as e:
+        logger.error(str(e))
+        raise HTTPException(status_code=404, detail=str(e))
