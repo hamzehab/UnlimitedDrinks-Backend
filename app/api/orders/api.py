@@ -15,6 +15,7 @@ router = APIRouter()
 @router.post("/checkout/session")
 async def checkout(customer_email: str, data: CheckoutModel):
     stripe.api_key = os.environ["STRIPE_SECRET_KEY"]
+    STRIPE_URL = os.environ["STRIPE_URL"]
 
     line_items = []
     taxes_and_fees = 0
@@ -50,8 +51,8 @@ async def checkout(customer_email: str, data: CheckoutModel):
             mode="payment",
             line_items=line_items,
             customer_email=customer_email,
-            success_url=f"{os.environ['URL']}/success",
-            cancel_url=f"{os.environ['URL']}/cart",
+            success_url=f"{STRIPE_URL}/success",
+            cancel_url=f"{STRIPE_URL}/cart",
             metadata={
                 "cartItems": json.dumps(data.cartItems),
                 "address_id": data.address_id,
