@@ -6,7 +6,7 @@ from db.schema import Category, Product
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
-from settings import settings
+from pydantic import PostgresDsn
 from tortoise import expand_db_url
 from tortoise.contrib.fastapi import register_tortoise
 from tortoise.exceptions import DoesNotExist
@@ -27,9 +27,7 @@ app.add_middleware(
 register_tortoise(
     app,
     config={
-        "connections": {
-            "default": expand_db_url(str(settings.POSTGRES_URL), "asyncpg")
-        },
+        "connections": {"default": expand_db_url(str(PostgresDsn), "asyncpg")},
         "apps": {
             "models": {
                 "models": ["db.schema", "aerich.models"],
