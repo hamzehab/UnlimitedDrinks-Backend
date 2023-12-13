@@ -1,11 +1,10 @@
 import json
-import os
 from random import randint, random
 
-from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
+from pydantic import PostgresDsn
 from tortoise import expand_db_url
 from tortoise.contrib.fastapi import register_tortoise
 from tortoise.exceptions import DoesNotExist
@@ -14,7 +13,6 @@ from app.api.router import router
 from app.db.schema import Category, Product
 
 app = FastAPI()
-load_dotenv()
 
 app.add_middleware(
     CORSMiddleware,
@@ -27,9 +25,7 @@ app.add_middleware(
 register_tortoise(
     app,
     config={
-        "connections": {
-            "default": expand_db_url(str(os.environ["POSTGRES_URL"]), "asyncpg")
-        },
+        "connections": {"default": expand_db_url(str(PostgresDsn), "asyncpg")},
         "apps": {
             "models": {
                 "models": ["app.db.schema", "aerich.models"],
