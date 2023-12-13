@@ -1,12 +1,23 @@
-from api.customer.api import does_customer_exist
-from db.schema import Address, Customer
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
 from loguru import logger
 
+from app.db.schema import Address, Customer
+
 from .models import AddressCreate, AddressModel, SingleAddressModel
 
 router = APIRouter()
+
+
+async def does_customer_exist(customer_id: str):
+    try:
+        customer = await Customer.get(id=customer_id)
+        if customer:
+            return True
+        else:
+            return False
+    except Exception:
+        return False
 
 
 @router.get("/{customer_id}", tags=["address"])

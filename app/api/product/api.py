@@ -1,8 +1,9 @@
 import random
 
-from db.schema import Category, Product
 from fastapi import APIRouter, HTTPException
 from loguru import logger
+
+from app.db.schema import Category, Product
 
 from .models import ProductModel, ReviewModel
 

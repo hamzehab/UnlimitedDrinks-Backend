@@ -1,6 +1,7 @@
-from db.schema import Category
 from fastapi import APIRouter, HTTPException
 from loguru import logger
+
+from app.db.schema import Category
 
 from .models import CategoryCreate, CategoryModel, CategoryUpdate
 

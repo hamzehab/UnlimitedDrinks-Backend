@@ -1,20 +1,20 @@
 import json
+import os
 from random import randint, random
 
-from api.router import router
-from db.schema import Category, Product
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
-from settings import settings
 from tortoise import expand_db_url
 from tortoise.contrib.fastapi import register_tortoise
 from tortoise.exceptions import DoesNotExist
 
-data = {}
-
+from app.api.router import router
+from app.db.schema import Category, Product
 
 app = FastAPI()
+load_dotenv()
 
 app.add_middleware(
     CORSMiddleware,
@@ -28,11 +28,11 @@ register_tortoise(
     app,
     config={
         "connections": {
-            "default": expand_db_url(str(settings.POSTGRES_URL), "asyncpg")
+            "default": expand_db_url(str(os.environ["POSTGRES_URL"]), "asyncpg")
         },
         "apps": {
             "models": {
-                "models": ["db.schema", "aerich.models"],
+                "models": ["app.db.schema", "aerich.models"],
                 "default_connection": "default",
             }
         },
@@ -43,6 +43,8 @@ register_tortoise(
 
 
 app.include_router(router)
+
+data = {}
 
 
 @app.on_event("startup")

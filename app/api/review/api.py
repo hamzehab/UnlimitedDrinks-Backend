@@ -1,6 +1,7 @@
-from db.schema import Review
 from fastapi import APIRouter, HTTPException
 from loguru import logger
+
+from app.db.schema import Review
 
 from .models import ReviewCreate
 

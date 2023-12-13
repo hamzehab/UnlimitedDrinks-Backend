@@ -1,8 +1,9 @@
-from api.address.models import AddressCreate, AddressModel, SingleAddressModel
-from db.schema import Address, Customer
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import JSONResponse
 from loguru import logger
+
+from app.api.address.models import AddressCreate, AddressModel, SingleAddressModel
+from app.db.schema import Address, Customer
 
 from .models import CustomerCreate, CustomerModel
 

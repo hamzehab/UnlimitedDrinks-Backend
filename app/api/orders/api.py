@@ -3,9 +3,10 @@ import os
 from datetime import datetime, timedelta, timezone
 
 import stripe
-from db.schema import Address, Category, Customer, Order, OrderItem, Product
 from fastapi import APIRouter, HTTPException, Request
 from loguru import logger
+
+from app.db.schema import Address, Category, Customer, Order, OrderItem, Product
 
 from .models import CheckoutModel, OrderItemModel, OrderModel
 

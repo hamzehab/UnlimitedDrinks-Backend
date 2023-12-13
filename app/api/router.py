@@ -1,10 +1,11 @@
-from api.address import api as address
-from api.category import api as category
-from api.customer import api as customer
-from api.orders import api as orders
-from api.product import api as products
-from api.review import api as reviews
 from fastapi import APIRouter
+
+from .address import api as address
+from .category import api as category
+from .customer import api as customer
+from .orders import api as orders
+from .product import api as products
+from .review import api as reviews
 
 router = APIRouter()
 

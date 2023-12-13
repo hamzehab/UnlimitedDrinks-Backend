@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from api.review.models import ReviewModel
 from pydantic import BaseModel
+
+from app.api.review.models import ReviewModel
 
 
 class ProductModel(BaseModel):

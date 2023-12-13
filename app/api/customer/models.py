@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from api.address.models import AddressModel
 from pydantic import BaseModel
+
+from app.api.address.models import AddressModel
 
 
 class CustomerModel(BaseModel):
