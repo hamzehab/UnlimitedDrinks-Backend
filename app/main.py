@@ -1,11 +1,11 @@
 import json
+import os
 from random import randint, random
 
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
-from settings import settings
 from tortoise import expand_db_url
 from tortoise.contrib.fastapi import register_tortoise
 from tortoise.exceptions import DoesNotExist
@@ -28,7 +28,7 @@ register_tortoise(
     app,
     config={
         "connections": {
-            "default": expand_db_url(str(settings.POSTGRES_URL), "asyncpg")
+            "default": expand_db_url(str(os.environ["DATABASE_URL"]), "asyncpg")
         },
         "apps": {
             "models": {
