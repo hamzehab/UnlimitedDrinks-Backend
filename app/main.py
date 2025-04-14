@@ -18,7 +18,7 @@ load_dotenv()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://hamzehab.github.io"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
