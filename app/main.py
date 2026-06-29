@@ -14,11 +14,11 @@ from tortoise.exceptions import DoesNotExist
 data = {}
 
 
-app = FastAPI()
+app = FastAPI(docs_url=None, redoc_url=None)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://hamzehab.github.io"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
